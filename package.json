@@ -4,11 +4,11 @@
   "description": "Codestates Immersive Course Sprint",
   "scripts": {
     "test": "node __test__/getReview.js && jest",
-    "test:sprint-one": "jest sprint-one/",
-    "test:sprint-two": "jest sprint-two/",
+    "test:part-one": "jest part-one/",
+    "test:part-two": "jest part-two/",
     "test:circleci": "node __test__/getReview.js && jest --json --outputFile=.circleci/results.json",
     "precommit": "lint-staged",
-    "lint": "eslint sprint-one/src sprint-two/src"
+    "lint": "eslint part-one/src part-two/src"
   },
   "lint-staged": {
     "linters": {

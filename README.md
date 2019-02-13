@@ -15,24 +15,32 @@
 
 ## Pair programming을 시작하기 전 혼자서 해볼 것들
 
+- [ ] 다양한 Datastructure에 대해 스스로 공부하고, sudo code를 작성해봅니다.
+
 ## Pair programming에서 해볼 것들
 
-- [ ]
+- [ ] Stack 과 Queue 를 functional, functional shared, prototypal, pseudoclassical 4가지 방법으로 구현합니다.
+- [ ] Linked List 를 functional style로 구현합니다.
+- [ ] Tree 를 functional shared methods style로 구현합니다.
+- [ ] Graph 를 pseudoclassical style로 구현합니다.
+- [ ] Hash Tabled 을 pseudoclassical style로 구현합니다.
+- [ ] Binary Search Tree 를 functional style로 구현합니다.
 
 ## Advanced 한 과제들
 
 - [ ] ES6 class 문법에 관하여 공부합니다.
 - [ ] 구현한 자료구조들을 ES6 class 문법을 사용하여 다시 구현해 봅니다.
+- [ ] Learnco Advanced에 도전해봅니다.
 
 ## Sprint Office Hour 시간에 발표해볼 과제들
 
-Stack
-Queue
-Linked list
-Tree
-Hash table
-Graph
-Binary Search Tree
+- Stack
+- Queue
+- Linked list
+- Tree
+- Hash table
+- Graph
+- Binary Search Tree
 
 ## Sprint 진행 방법
 

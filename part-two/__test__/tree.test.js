@@ -8,7 +8,7 @@ describe("tree", function() {
   });
 
   it('should have methods named "addChild" and "contains", and a property named "value"', function() {
-    expect(tree).toHaveProperty("addChilde");
+    expect(tree).toHaveProperty("addChild");
     expect(tree).toHaveProperty("contains");
     expect(tree).toHaveProperty("value");
   });
