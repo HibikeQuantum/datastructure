@@ -133,3 +133,10 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# students data
+__test__/review.json
+.circleci/results.json
+
+# prettier
+.prettierrc

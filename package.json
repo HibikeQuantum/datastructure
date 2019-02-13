@@ -1,13 +1,12 @@
 {
   "name": "data-structure",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "directories": {
-    "lib": "lib"
-  },
+  "description": "Codestates Immersive Course Sprint",
   "scripts": {
-    "test": "mocha sprint-one/spec/specs-cli.js sprint-two/spec",
+    "test": "node __test__/getReview.js && jest",
+    "test:sprint-one": "jest sprint-one/",
+    "test:sprint-two": "jest sprint-two/",
+    "test:circleci": "node __test__/getReview.js && jest --json --outputFile=.circleci/results.json",
     "precommit": "lint-staged",
     "lint": "eslint sprint-one/src sprint-two/src"
   },
@@ -20,19 +19,17 @@
     },
     "ignore": [
       "node_modules/",
-      "**/spec/*.js",
-      "lib/underscore/underscore.js"
+      "**/__test__/*.js"
     ]
   },
   "author": "Codestates",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
-    "chai": "^4.1.2",
     "eslint": "^5.11.1",
-    "eslint-plugin-import": "^2.14.0",
     "husky": "^0.14.3",
+    "jest": "^24.1.0",
     "lint-staged": "^7.2.2",
-    "mocha": "^5.2.0"
+    "underscore": "^1.9.1"
   }
 }
