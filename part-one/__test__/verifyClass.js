@@ -211,7 +211,7 @@ function verifyClass(constructor) {
               if (value && typeof value === "object") {
                 assuming(reusesNonFunctions)
                   .expect(value)
-                  .toEqual(otherInstance[key]);
+                  .toBe(otherInstance[key]);
               }
             });
           }
