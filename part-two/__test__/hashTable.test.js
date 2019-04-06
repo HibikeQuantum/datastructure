@@ -1,4 +1,6 @@
 const HashTable = require("../src/hashTable");
+const _ = require("underscore");
+
 let {
   LimitedArray,
   getIndexBelowMaxForKey
