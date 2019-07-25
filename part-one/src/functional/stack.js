@@ -7,10 +7,18 @@ const Stack = function () {
 
   // Implement the methods below
   someInstance.push = function (value) {
+    storage[count] = value;
     count++;
   };
 
-  someInstance.pop = function () {};
+  someInstance.pop = function () {
+    if (count > 0) {
+      var out = storage[count];
+      delete storage[count];
+      count--;
+      return out;
+    }
+  };
 
   someInstance.size = function () {
     return count;
@@ -24,3 +32,4 @@ if (typeof module === 'object' && typeof module.exports === 'object') {
     Stack
   };
 }
+
