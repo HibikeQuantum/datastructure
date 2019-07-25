@@ -13,19 +13,19 @@ const runner = require("./testRunner");
 
 // Test for Functional-shared style
 
-runner(
-  "functional-shared",
-  require("../src/functional-shared/stack"),
-  require("../src/functional-shared/queue")
-);
+// runner(
+//   "functional-shared",
+//   require("../src/functional-shared/stack"),
+//   require("../src/functional-shared/queue")
+// );
 
 // Test for Prototypal style
 
-// runner(
-//   "prototypal",
-//   require("../src/prototypal/stack"),
-//   require("../src/prototypal/queue")
-// );
+runner(
+  "prototypal",
+  require("../src/prototypal/stack"),
+  require("../src/prototypal/queue")
+);
 
 // Test for pseudoclassical style
 
