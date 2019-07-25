@@ -2,6 +2,7 @@ const Queue = function () {
   // Hey! Rewrite in the new style. Your code will wind up looking very similar,
   // but try not not reference your old code in writing the new style.
   var someInstance = {
+    seq: 0,
     storage: {},
     count: 0
   };
@@ -19,31 +20,37 @@ var extend = function (to, from) {
 const queueMethods = {};
 
 queueMethods.enqueue = function (value) {
-  this.storage[this.count] = value;
+  this.storage[this.seq] = value;
+  this.seq++;
   this.count++;
 }
 queueMethods.dequeue = function () {
-  var temp = Object.keys(this.storage).sort((a, b) => {
-    if (a > b) {
-      return 1
-    } else {
-      return -1
-    }
-  });
+  if (this.count > 0) {
+    var temp = Object.keys(this.storage).sort((a, b) => {
+      if (a > b) {
+        return 1
+      }
+      if (a < b) {
+        return -1
+      }
+    });
 
-  let output = this.storage[temp[0]];
-  for (let key in this.storage) {
-    if (this.storage[key] === this.storage[temp]) {
-      delete this.storage[key]
+    let output = this.storage[temp[0]];
+
+    for (let key in this.storage) {
+
+      if (this.storage[key] === this.storage[temp[0]]) {
+        delete this.storage[key]
+
+      }
     }
+    this.count--;
+    return output
   }
-  this.count--;
-  return output
 };
 queueMethods.size = function () {
   return this.count
 }
-
 
 if (typeof module === 'object' && typeof module.exports === 'object') {
   module.exports = {
