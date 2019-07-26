@@ -1,6 +1,6 @@
 const LinkedList = require("../src/linkedList");
 
-describe("linkedList", function() {
+describe.skip("linkedList", function() {
   let linkedList;
 
   beforeEach(function() {
