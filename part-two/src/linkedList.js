@@ -7,6 +7,7 @@ const LinkedList = function() {
   if (list.head===null) {
     const initHead = Node();
     list.head = initHead;
+    list.next = list.head;
   }
   if (list.tail===null) {
     const initTail = Node();
@@ -14,57 +15,58 @@ const LinkedList = function() {
   }
 
   list.addToTail = function(value) {
-    const newNode = Node(value);
+    var newNode = Node(value);
+  
     newNode.next = list.tail;
+    list.tail.next = newNode;
 
     if ( list.tail.next === null || list.head.next === null){
       list.head.next = newNode;
-      list.tail.next = newNode.value;
+      list.tail.next = newNode;
     }
   };
 
   list.removeHead = function() {
-    const tempValue = list.head.value;
-    const tempNext = list.head.next;
-    delete list.next;
+    const tempValue = list.head.next.value;
+    const tempNext = list.head.next.next;
+    delete list.head.next;
     list.head.next = tempNext;
     return tempValue;
   };
 
-  list.contains = function(target){
-
-    if (list.value !== target){
-      list.contains(target)
-    } else {
-      return true;
-    }
-    if (list.next === list.tail && list.value === target){
-      return false;
-    }
-  };
-
-  return list;
-};
 
 const Node = function(value) {
   const node = {};
 
   node.value = value;
   node.next = null;
-
+  
+  node.contains = function() {
+    if (node.value !== target && node.value !== undefined) {
+      node.contains(target);
+    } else {
+      return true;
+    }
+    if (node.next === node.tail && node.value === target) {
+      return false;
+    } 
+  };
   return node;
 };
 
-var myList = LinkedList();
-myList.addToTail(10);   //테일이 없는 에러
-// console.log("myList: " ,myList, "myList.list: " , myList.list)
-myList.addToTail(20);
-// console.log("myList: " ,myList, "myList.list: " , myList.list)
+// var myList = LinkedList();
+// myList.addToTail(10);   //테일이 없는 에러
+// // console.log("myList: " ,myList, "myList.list: " , myList.list)
+// myList.addToTail(20);
+// myList.removeHead();
+// // console.log("myList: " ,myList, "myList.list: " , myList.list)
+// myList.addToTail(30);
 // myList.removeHead();    // 10이 지워짐.
+// console.log(myList);
 // myList.contains(5)  // false
-// myList.contains(10)  // true;
+// myList.contains(30)  // true;
 
 /*
  * Complexity: What is the time complexity of the above functions?
  */
-// module.exports = LinkedList;
+module.exports = LinkedList;
