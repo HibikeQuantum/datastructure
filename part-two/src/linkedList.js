@@ -10,27 +10,21 @@ const LinkedList = function () {
   }
   if (list.tail === null) {
     const initTail = Node();
-    list.tail = initTail
+    list.tail = initTail;
+    list.tail.v = 1;
   }
 
   list.addToTail = function (value) {
     var newNode = Node(value);
 
-    if (!list.head.value){
-      list.head = newNode
-    }
+    newNode.next = null;
     list.tail.next = newNode;
-    list.tail = newNode;
-
-    // newNode.next = list.tail;
-    // list.tail.next = newNode;
-    // list.tail.value = newNode.value;
-
-    // if (list.tail.next === null || list.head.next === null) {
-    //   list.head.next = newNode;
-    //   list.head.value = newNode.value;
-    //   list.tail.next = newNode;
-    // }
+    list.tail.value = newNode.value;
+    if (list.tail.next === null || list.head.next === null) {
+      list.head.next = newNode;
+      list.head.value = newNode.value;
+      list.tail.next = newNode;
+    }
 
   };
 
@@ -42,19 +36,23 @@ const LinkedList = function () {
     list.head.value = list.head.next.value;
     return tempValue;
   };
-
+  
   list.contains = function (target) {
     var node = list.head
-    while (node && node !== list.tail) {
+    while (1) {
+      console.log(node);
       if (node.value === target) {
         return true;
       }
-      node = node.next
+      node = node.next;
+      console.log("1", node, list.tail)
+      if (node === null) {
+        return false;
+      }
     }
-    return false;
   }
 
-  return list
+  return list;
 }
 
 
@@ -80,20 +78,10 @@ const Node = function (value) {
 
 
 var myList = LinkedList();
-myList.addToTail(10);   //테일이 없는 에러
+myList.addToTail(4);   //테일이 없는 에러
+myList.addToTail(3);
 // console.log("myList: " ,myList, "myList.list: " , myList.list)
-console.log(myList.head.value,"=== 10 이 정상")
-myList.addToTail(20);
-console.log(myList.removeHead(),'제거함');
-console.log(myList.head.value,"=== 20 이 정상")
-// console.log("myList: " ,myList, "myList.list: " , myList.list)
-myList.addToTail(30);
-myList.removeHead();    // 10이 지워짐.
-console.log(myList);
-myList.contains(5)  // false
-myList.contains(30)  // true;
-
-/*
- * Complexity: What is the time complexity of the above functions?
- */
-module.exports = LinkedList;
+console.log(myList)
+// myList.addToTail(3);
+// console.log(myList);
+myList.contains(3);
