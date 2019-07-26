@@ -58,3 +58,7 @@ if (typeof module === 'object' && typeof module.exports === 'object') {
     queueMethods
   };
 }
+
+
+var myQ = Queue();
+console.log(myQ.size());
