@@ -6,7 +6,7 @@ let {
   getIndexBelowMaxForKey
 } = require("../src/hashTableHelpers");
 
-describe("hashTable", function() {
+describe.skip("hashTable", function() {
   let hashTable;
   let people = [
     ["Steven", "Tyler"],

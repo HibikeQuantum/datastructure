@@ -1,70 +1,97 @@
-const LinkedList = function() {
-  const list = {
-  };
+const LinkedList = function () {
+  const list = {};
   list.head = null;
   list.tail = null;
 
-  if (list.head===null) {
+  if (list.head === null) {
     const initHead = Node();
-    list.head = initHead;
+    list.head = initHead
     list.next = list.head;
   }
-  if (list.tail===null) {
+  if (list.tail === null) {
     const initTail = Node();
     list.tail = initTail
   }
 
-  list.addToTail = function(value) {
+  list.addToTail = function (value) {
     var newNode = Node(value);
-  
-    newNode.next = list.tail;
-    list.tail.next = newNode;
 
-    if ( list.tail.next === null || list.head.next === null){
-      list.head.next = newNode;
-      list.tail.next = newNode;
+    if (!list.head.value){
+      list.head = newNode
     }
+    list.tail.next = newNode;
+    list.tail = newNode;
+
+    // newNode.next = list.tail;
+    // list.tail.next = newNode;
+    // list.tail.value = newNode.value;
+
+    // if (list.tail.next === null || list.head.next === null) {
+    //   list.head.next = newNode;
+    //   list.head.value = newNode.value;
+    //   list.tail.next = newNode;
+    // }
+
   };
 
-  list.removeHead = function() {
+  list.removeHead = function () {
     const tempValue = list.head.next.value;
     const tempNext = list.head.next.next;
     delete list.head.next;
     list.head.next = tempNext;
+    list.head.value = list.head.next.value;
     return tempValue;
   };
 
+  list.contains = function (target) {
+    var node = list.head
+    while (node && node !== list.tail) {
+      if (node.value === target) {
+        return true;
+      }
+      node = node.next
+    }
+    return false;
+  }
 
-const Node = function(value) {
+  return list
+}
+
+
+const Node = function (value) {
   const node = {};
 
   node.value = value;
   node.next = null;
-  
-  node.contains = function() {
-    if (node.value !== target && node.value !== undefined) {
-      node.contains(target);
-    } else {
-      return true;
-    }
-    if (node.next === node.tail && node.value === target) {
-      return false;
-    } 
-  };
+
+  // node.contains = function () {
+  // if (node.value !== target && node.value !== undefined) {
+  //   node.contains(target);
+  // } else {
+  //   return true;
+  // }
+  // if (node.next === node.tail && node.value === target) {
+  //   return false;
+  // }
+  // };
+
   return node;
 };
 
-// var myList = LinkedList();
-// myList.addToTail(10);   //테일이 없는 에러
-// // console.log("myList: " ,myList, "myList.list: " , myList.list)
-// myList.addToTail(20);
-// myList.removeHead();
-// // console.log("myList: " ,myList, "myList.list: " , myList.list)
-// myList.addToTail(30);
-// myList.removeHead();    // 10이 지워짐.
-// console.log(myList);
-// myList.contains(5)  // false
-// myList.contains(30)  // true;
+
+var myList = LinkedList();
+myList.addToTail(10);   //테일이 없는 에러
+// console.log("myList: " ,myList, "myList.list: " , myList.list)
+console.log(myList.head.value,"=== 10 이 정상")
+myList.addToTail(20);
+console.log(myList.removeHead(),'제거함');
+console.log(myList.head.value,"=== 20 이 정상")
+// console.log("myList: " ,myList, "myList.list: " , myList.list)
+myList.addToTail(30);
+myList.removeHead();    // 10이 지워짐.
+console.log(myList);
+myList.contains(5)  // false
+myList.contains(30)  // true;
 
 /*
  * Complexity: What is the time complexity of the above functions?
