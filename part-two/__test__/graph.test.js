@@ -1,6 +1,6 @@
 const Graph = require("../src/graph");
 
-describe.skip("graph", function() {
+describe("graph", function() {
   let graph;
 
   beforeEach(function() {
