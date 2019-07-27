@@ -60,8 +60,7 @@ const BinarySearchTree = function (value) {
     //function(value) {
     //  array.push(value);
     //};
-
-
+    console.log(value,"네가 찾는 values")
     console.log("나는 누굴까.",callback)
     callback()
     if (this.left !== undefined){
