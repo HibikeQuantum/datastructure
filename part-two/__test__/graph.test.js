@@ -7,7 +7,7 @@ describe("graph", function() {
     graph = new Graph();
   });
 
-  it.skip('should have methods named "addNode", "contains", "removeNode", "addEdge", "hasEdge", "removeEdge" and "forEachNode"', function() {
+  it('should have methods named "addNode", "contains", "removeNode", "addEdge", "hasEdge", "removeEdge" and "forEachNode"', function() {
     expect(graph).toHaveProperty("addNode");
     expect(graph).toHaveProperty("contains");
     expect(graph).toHaveProperty("removeNode");
@@ -17,19 +17,19 @@ describe("graph", function() {
     expect(graph).toHaveProperty("forEachNode");
   });
 
-  it.skip("should store values as nodes that were inserted", function() {
+  it("should store values as nodes that were inserted", function() {
     graph.addNode(1);
     expect(graph.contains(1)).toEqual(true);
   });
 
-  it.skip("should remove nodes that were inserted", function() {
+  it("should remove nodes that were inserted", function() {
     graph.addNode(2);
     expect(graph.contains(2)).toEqual(true);
     graph.removeNode(2);
     expect(graph.contains(2)).toEqual(false);
   });
 
-  it.skip("should create edges between two nodes", function() {
+  it("should create edges between two nodes", function() {
     graph.addNode(2);
     graph.addNode(1);
     graph.addNode(3);
@@ -38,7 +38,7 @@ describe("graph", function() {
     expect(graph.hasEdge(3, 1)).toEqual(false);
   });
 
-  it.skip("should remove edges between nodes", function() {
+  it("should remove edges between nodes", function() {
     graph.addNode(4);
     graph.addNode(5);
     graph.addEdge(5, 4);
@@ -47,7 +47,7 @@ describe("graph", function() {
     expect(graph.hasEdge(4, 5)).toEqual(false);
   });
 
-  it.skip("should remove edges between nodes when a node is removed", function() {
+  it("should remove edges between nodes when a node is removed", function() {
     graph.addNode(4);
     graph.addNode(5);
     graph.addEdge(5, 4);
