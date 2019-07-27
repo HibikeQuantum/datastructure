@@ -5,8 +5,8 @@ const Graph = function() {
 
 // Add a node to the graph, passing in the node's value.
 Graph.prototype.addNode = function(node) {
-    console.log('HEY', node)
     this.adjList[node] = [];
+    return this;
 };
 
 // Return a boolean value indicating if the value passed to contains is represented in the graph.
@@ -22,6 +22,7 @@ Graph.prototype.contains = function(node) {
 // Removes a node from the graph.
 Graph.prototype.removeNode = function(node) {
     delete this.adjList[node];
+    return this;
 };
 
 // Returns a boolean indicating whether two specified nodes are connected.  Pass in the values contained in each of the two nodes.
@@ -49,18 +50,21 @@ Graph.prototype.hasEdge = function(fromNode, toNode) {
 
 // Connects two nodes in a graph by adding an edge between them.
 Graph.prototype.addEdge = function(fromNode, toNode) {
-    console.log("에드엣지", fromNode, toNode)
     if (fromNode && toNode) {
         this.adjList[fromNode].push(toNode);
         this.adjList[toNode].push(fromNode);
     }
-    
-  for (let j = 0, j < this.adjList[]) {
-    var temp = this.adjList[j];
-    for (let i = j + 1; i < this.adjList[j].length; i++) {
-      if (this.adjList[i === temp) 
-    }
-  }
+    for (let key in this.adjList) {
+        var temp = [];
+        for (let i = 0; i < this.adjList[key].length; i++) {
+          if (temp.indexOf(this.adjList[key][i]) !== -1) {
+            this.adjList[key].splice(i, 1);
+            temp.splice(temp.indexOf(this.adjList[key][i]), 1)
+          }
+          temp.push(this.adjList[key][i]);
+        }
+      }
+    return this;
 };
 
 // Remove an edge between any two specified (by value) nodes.
@@ -75,33 +79,21 @@ Graph.prototype.removeEdge = function(fromNode, toNode) {
             this.adjList[fromNode].splice(i ,1);
         }
     }
+    return this;
 };
 
 // Pass in a callback which will be executed on each node of the graph.
 Graph.prototype.forEachNode = function(cb) {
-    for (let key in this.adjList) {
-//         console.error("메롱", this.adjList[key]);
-        cb(this.adjList[key][0]);
+    for (var key in this.adjList) {
+        if (parseInt(key) !== this.adjList[key]) {    
+            cb(parseInt(key), this.adjList[key]);
+        }
     }
+    console.log(this.adjList);
 };
 
 /*
  * Complexity: What is the time complexity of the above functions?
  */
-var graph = new Graph();
-graph.addNode(1);
-graph.addNode(2);
-graph.addEdge(1, 2);
-// console.log('그래프', graph);
-graph.addNode(5);
-
-
-var connectToFive = function(item) {
-    console.log("ITEM", item)
-    graph.addEdge(item, 5);
-};
-graph.forEachNode(connectToFive);
-console.log(graph);
-
 
 module.exports = Graph;
