@@ -5,11 +5,11 @@ const runner = require("./testRunner");
 
 // Test for functional style
 
-// runner(
-//   "functional",
-//   require("../src/functional/stack"),
-//   require("../src/functional/queue")
-// );
+runner(
+  "functional",
+  require("../src/functional/stack"),
+  require("../src/functional/queue")
+);
 
 // Test for Functional-shared style
 
@@ -29,8 +29,8 @@ const runner = require("./testRunner");
 
 // Test for pseudoclassical style
 
-runner(
-  "pseudoclassical",
-  require("../src/pseudoclassical/stack"),
-  require("../src/pseudoclassical/queue")
-);
+// runner(
+//   "pseudoclassical",
+//   require("../src/pseudoclassical/stack"),
+//   require("../src/pseudoclassical/queue")
+// );

@@ -62,14 +62,19 @@ const BinarySearchTree = function (value) {
     //};
 
 
-    console.log("나는 누굴까.",callback)
-    callback()
-    if (this.left !== undefined){
-      callback( this.left.depthFirstLog(callback) )
+    function getValues(node) {
+        if(node.value) {
+            callback(node.value);
+            if (node.left) {
+                getValues(node.left);
+            }
+            if (node.right) {
+                getValues(node.right);
+            }
+        }
     }
-    if (this.right !== undefined){
-      callback ( this.right.depthFirstLog(callback) )
-    }
+    getValues(this);
+
 
   };
   //
@@ -91,6 +96,7 @@ myBi.insert(10);
 myBi.insert(25);
 myBi.insert(15);
 myBi.depthFirstLog(func);
+console.log(array);
 
 
 

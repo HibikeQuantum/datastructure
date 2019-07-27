@@ -36,6 +36,11 @@ stackMethods.size = function() {
   return this.count;
 }
 
+// var stack = Stack();
+// stack.push("a");
+// console.log(stack.pop());
+// stack.push("b");
+// console.log(stack.pop());
 
 
 if (typeof module === 'object' && typeof module.exports === 'object') {
