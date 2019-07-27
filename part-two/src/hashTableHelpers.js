@@ -53,7 +53,6 @@ const getIndexBelowMaxForKey = function(str, max) {
     
     hash = Math.abs(hash);
   }
-  console.log("HASH", hash % max);
   return hash % max;
 };
 
@@ -65,3 +64,4 @@ module.exports = {
   LimitedArray,
   getIndexBelowMaxForKey
 };
+
