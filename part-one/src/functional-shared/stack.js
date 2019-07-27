@@ -8,7 +8,7 @@ const Stack = function () {
   return someInstance;
 };
 
-var extend = function (to, from) {
+const extend = function (to, from) {
   for (let key in from) {
     to[key] = from[key]
   }
@@ -20,7 +20,7 @@ stackMethods.push = function(value) {
   this.storage[this.seq] = value;
   this.seq++;
   this.count++;
-}
+};
 
 stackMethods.pop = function() {
   if (this.count > 0) {
@@ -30,18 +30,11 @@ stackMethods.pop = function() {
     this.count--;
     return output;
   }
-}
+};
 
 stackMethods.size = function() {
   return this.count;
-}
-
-// var stack = Stack();
-// stack.push("a");
-// console.log(stack.pop());
-// stack.push("b");
-// console.log(stack.pop());
-
+};
 
 if (typeof module === 'object' && typeof module.exports === 'object') {
   module.exports = {

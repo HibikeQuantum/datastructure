@@ -1,10 +1,9 @@
 const Queue = function () {
   const someInstance = {};
+  const storage = {};
   var count = 0;
   var seq = 0;
   // Use an object with numeric keys to store values
-  const storage = {};
-  // Implement the methods below
 
   someInstance.enqueue = function (value) {
     storage[seq] = value;
@@ -23,8 +22,8 @@ const Queue = function () {
 
     let output = storage[temp[0]]
 
-    for ( let key in storage){
-      if(storage[key] === storage[temp[0]]){
+    for (let key in storage) {
+      if (storage[key] === storage[temp[0]]) {
         delete storage[key];
       }
     }
@@ -43,10 +42,8 @@ const Queue = function () {
   return someInstance;
 };
 
-
 if (typeof module === 'object' && typeof module.exports === 'object') {
   module.exports = {
     Queue
   };
 }
-

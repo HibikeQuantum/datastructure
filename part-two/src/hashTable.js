@@ -1,18 +1,16 @@
 const { LimitedArray, getIndexBelowMaxForKey } = require("./hashTableHelpers");
 
-//get set checkLimit each
+//LimitedArray' has get, set, checkLimit, each method
 const HashTable = function() {
   this._limit = 8;
   this._storage = LimitedArray(this._limit);
 };
 
 HashTable.prototype.insert = function (k, v) {
-  //get, set, checkLimit, each
   const index = getIndexBelowMaxForKey(k, this._limit);
   this._storage.set(index, v);
 
 };
-
 
 HashTable.prototype.retrieve = function(k) {
   const index = getIndexBelowMaxForKey(k, this._limit);
@@ -22,7 +20,6 @@ HashTable.prototype.retrieve = function(k) {
   } else {
     return undefined;
   }
-
 
 };
 
@@ -35,5 +32,6 @@ HashTable.prototype.remove = function (k) {
  * Complexity: What is the time complexity of the above functions?
  *
 */
+
 module.exports = HashTable;
 

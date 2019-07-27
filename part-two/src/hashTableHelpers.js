@@ -13,7 +13,6 @@
 const LimitedArray = function(limit) {
 
   const limitedArray = {};
-  // limitedArray.storage = [];
   limitedArray.storage = Array (limit);
   limitedArray.get = function(index) {
     checkLimit(index);
@@ -24,7 +23,9 @@ const LimitedArray = function(limit) {
     limitedArray.storage[index] = value;
   };
   limitedArray.each = function(callback) {
+    // eslint-disable-next-line no-undef
     for (let i = 0; i < storage.length; i++) {
+      // eslint-disable-next-line no-undef
       callback(storage[i], i, storage);
     }
   };

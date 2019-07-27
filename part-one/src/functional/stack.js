@@ -1,11 +1,10 @@
 const Stack = function () {
   const someInstance = {};
-
-  // Use an object with numeric keys to store values
   const storage = {};
+  // Use an object with numeric keys to store values
   let count = 0;
   let seq = 0;
-  // Implement the methods below
+
   someInstance.push = function (value) {
     storage[seq] = value;
     seq++;
@@ -34,10 +33,3 @@ if (typeof module === 'object' && typeof module.exports === 'object') {
     Stack
   };
 }
-
-var stack =  Stack ();
-stack.push(1);
-stack.pop();
-
-
-

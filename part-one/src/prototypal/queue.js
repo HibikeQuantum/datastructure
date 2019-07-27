@@ -2,7 +2,6 @@ const Queue = function () {
   // Hey! Rewrite in the new style. Your code will wind up looking very similar,
   // but try not not reference your old code in writing the new style.
   var someInstance = Object.create(queueMethods);
-
   return someInstance;
 };
 
@@ -16,7 +15,8 @@ queueMethods.enqueue = function (value) {
   this.storage[this.seq] = value;
   this.seq++;
   this.count++;
-}
+};
+
 queueMethods.dequeue = function () {
   if (this.count > 0) {
     var temp = Object.keys(this.storage).sort((a, b) => {
@@ -41,9 +41,10 @@ queueMethods.dequeue = function () {
     return output
   }
 };
+
 queueMethods.size = function () {
   return this.count
-}
+};
 
 module.exports = {
   Queue,

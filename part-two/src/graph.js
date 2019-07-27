@@ -5,7 +5,6 @@ const Graph = function () {
 };
 
 // Add a node to the graph, passing in the node's value.
-
 Graph.prototype.addNode = function (node) {
   this.adjList[node] = [];
   return this;
@@ -22,7 +21,6 @@ Graph.prototype.contains = function (node) {
 };
 
 // Removes a node from the graph.
-
 Graph.prototype.removeNode = function (node) {
   delete this.adjList[node];
   return this;
@@ -30,7 +28,7 @@ Graph.prototype.removeNode = function (node) {
 
 // Returns a boolean indicating whether two specified nodes are connected.  Pass in the values contained in each of the two nodes.
 Graph.prototype.hasEdge = function (fromNode, toNode) {
-  var counter = 0;
+  let counter = 0;
   if (!this.adjList[fromNode] || !this.adjList[toNode]) {
     return false;
   }
@@ -44,11 +42,7 @@ Graph.prototype.hasEdge = function (fromNode, toNode) {
       counter++;
     }
   }
-  if (counter === 2) {
-    return true;
-  } else {
-    return false;
-  }
+  return counter === 2;
 };
 
 // Connects two nodes in a graph by adding an edge between them.

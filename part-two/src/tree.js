@@ -13,15 +13,13 @@ const Tree = function (value) {
   return newTree;
 };
 
-
 const treeMethods = {};
 
 treeMethods.addChild = function (value) {
   var tempTree = Tree();
   tempTree["value"] = value;
-  // var i = this.children.length;
   this.children.push(tempTree);
-}
+};
 
 treeMethods.contains = function (target) {
 
@@ -36,18 +34,6 @@ treeMethods.contains = function (target) {
   }
   return false;
 };
-
-// var myTree = Tree(1);
-// myTree.addChild(5);
-// myTree.addChild(6);
-// myTree.children[0].addChild(7);
-// myTree.children[1].addChild(8);
-// console.log(myTree.contains(7), "=== true");
-// console.log(myTree.contains(5), "=== true");
-// console.log(myTree.contains(8), "=== true");
-// console.log(myTree.contains(9), "=== false");
-//console.log(myTree.contains(8), "=== true");
-// console.log(myTree.contains(1), "=== true");
 
 /*
  * Complexity: What is the time complexity of the above functions?
