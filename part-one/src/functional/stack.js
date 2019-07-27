@@ -4,17 +4,19 @@ const Stack = function () {
   // Use an object with numeric keys to store values
   const storage = {};
   let count = 0;
-
+  let seq = 0;
   // Implement the methods below
   someInstance.push = function (value) {
-    storage[count] = value;
+    storage[seq] = value;
+    seq++;
     count++;
   };
 
   someInstance.pop = function () {
     if (count > 0) {
-      var out = storage[count];
-      delete storage[count];
+      seq--;
+      var out = storage[seq];
+      delete storage[seq];
       count--;
       return out;
     }
