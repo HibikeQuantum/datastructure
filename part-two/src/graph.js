@@ -1,4 +1,5 @@
 // Instantiate a new graph
+// pseudoclassical style
 const Graph = function () {
   this.adjList = {
   };

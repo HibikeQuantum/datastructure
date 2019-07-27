@@ -1,9 +1,4 @@
-const extend = function (to, from) {
-  for (let key in from) {
-    to[key] = from[key]
-  }
-};
-
+// functional shared methods style
 const Tree = function (value) {
   const newTree = {
     children: [],
@@ -11,6 +6,12 @@ const Tree = function (value) {
   };
   extend(newTree, treeMethods);
   return newTree;
+};
+
+const extend = function (to, from) {
+  for (let key in from) {
+    to[key] = from[key]
+  }
 };
 
 const treeMethods = {};

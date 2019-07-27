@@ -2,33 +2,33 @@
 
 ## 이번 Sprint의 학습 목표
 
-- [ ] 프로그래밍에 사용되는 다양한 자료구조(data structure)가 무엇들이 있는지 배운다
-- [ ] 각각의 자료구조가 동작되는 원리를 이해하고 장단점을 파악하여 어느 상황에 사용해야 유리한지 파악한다
-- [ ] 다양한 데이터 구조를 자바스크립트 언어를 이용하여 스스로 구현해(흉내내) 본다
-- [ ] 객체지향프로그래밍(OOP) 의 개념과 특징을 자바스크립트 프로토타입 객체지향을 사용하여 익히고 적용해 본다
-- [ ] JS object 를 만드는 방법을 배우고 만든 object를 위한 method 를 만드는 다양한 방법들(instantiation patterns)을 배운다
-- [ ] 각각의 데이터구조 안에서 각 액션의 시간 복잡도를 계산할 줄 안다
+- [x] 프로그래밍에 사용되는 다양한 자료구조(data structure)가 무엇들이 있는지 배운다
+- [x] 각각의 자료구조가 동작되는 원리를 이해하고 장단점을 파악하여 어느 상황에 사용해야 유리한지 파악한다
+- [x] 다양한 데이터 구조를 자바스크립트 언어를 이용하여 스스로 구현해(흉내내) 본다
+- [x] 객체지향프로그래밍(OOP) 의 개념과 특징을 자바스크립트 프로토타입 객체지향을 사용하여 익히고 적용해 본다
+- [x] JS object 를 만드는 방법을 배우고 만든 object를 위한 method 를 만드는 다양한 방법들(instantiation patterns)을 배운다
+- [x] 각각의 데이터구조 안에서 각 액션의 시간 복잡도를 계산할 줄 안다
 
 ## Sprint를 시작하기 전 알고있어야 하는 것들
 
-- [ ] Pre Course에서 배운 Javascript 지식들
+- [x] Pre Course에서 배운 Javascript 지식들
 
 ## Pair programming을 시작하기 전 혼자서 해볼 것들
 
-- [ ] 다양한 Datastructure에 대해 스스로 공부하고, sudo code를 작성해봅니다.
+- [x] 다양한 Datastructure에 대해 스스로 공부하고, sudo code를 작성해봅니다.
 
 ## Pair programming에서 해볼 것들
 
-- [ ] Stack 과 Queue 를 functional, functional shared, prototypal, pseudoclassical 4가지 방법으로 구현합니다.
-- [ ] Linked List 를 functional style로 구현합니다.
-- [ ] Tree 를 functional shared methods style로 구현합니다.
-- [ ] Graph 를 pseudoclassical style로 구현합니다.
-- [ ] Hash Tabled 을 pseudoclassical style로 구현합니다.
-- [ ] Binary Search Tree 를 functional style로 구현합니다.
+- [x] Stack 과 Queue 를 functional, functional shared, prototypal, pseudoclassical 4가지 방법으로 구현합니다.
+- [x] Linked List 를 functional style로 구현합니다.
+- [x] Tree 를 functional shared methods style로 구현합니다.
+- [x] Graph 를 pseudoclassical style로 구현합니다.
+- [x] Hash Tabled 을 pseudoclassical style로 구현합니다.
+- [x] Binary Search Tree 를 functional style로 구현합니다.
 
 ## Advanced 한 과제들
 
-- [ ] ES6 class 문법에 관하여 공부합니다.
+- [x] ES6 class 문법에 관하여 공부합니다.
 - [ ] 구현한 자료구조들을 ES6 class 문법을 사용하여 다시 구현해 봅니다.
 - [ ] Learnco Advanced에 도전해봅니다.
 

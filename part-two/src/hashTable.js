@@ -1,6 +1,6 @@
 const { LimitedArray, getIndexBelowMaxForKey } = require("./hashTableHelpers");
-
-//LimitedArray' has get, set, checkLimit, each method
+// pseudoclassical style
+// LimitedArray' has get, set, checkLimit, each method
 const HashTable = function() {
   this._limit = 8;
   this._storage = LimitedArray(this._limit);
