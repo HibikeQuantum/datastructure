@@ -61,3 +61,6 @@ module.exports = {
   LimitedArray,
   getIndexBelowMaxForKey
 };
+
+var aa = LimitedArray(5);
+console.log(aa["storage"]);
