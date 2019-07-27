@@ -1,6 +1,8 @@
 // Instantiate a new graph
-const Graph = function() {};
+const Graph = function() {}
 
+const Node = function () {
+}
 // Add a node to the graph, passing in the node's value.
 Graph.prototype.addNode = function(node) {};
 
@@ -27,3 +29,12 @@ Graph.prototype.forEachNode = function(cb) {};
  */
 
 module.exports = Graph;
+
+const Tree = function (value) {
+  const newTree = {
+    children: [],
+    value: value
+  };
+  extend(newTree, treeMethods);
+  return newTree;
+};
