@@ -33,3 +33,9 @@ if (typeof module === 'object' && typeof module.exports === 'object') {
   };
 }
 
+var stack =  Stack ();
+stack.push(1);
+stack.pop();
+
+
+

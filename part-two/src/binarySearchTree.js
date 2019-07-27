@@ -60,6 +60,7 @@ const BinarySearchTree = function (value) {
     //function(value) {
     //  array.push(value);
     //};
+<<<<<<< HEAD
     console.log(value,"네가 찾는 values")
     console.log("나는 누굴까.",callback)
     callback()
@@ -68,7 +69,23 @@ const BinarySearchTree = function (value) {
     }
     if (this.right !== undefined){
       callback ( this.right.depthFirstLog(callback) )
+=======
+
+
+    function getValues(node) {
+        if(node.value) {
+            callback(node.value);
+            if (node.left) {
+                getValues(node.left);
+            }
+            if (node.right) {
+                getValues(node.right);
+            }
+        }
+>>>>>>> 6110ee6fbebe333f975a35c7c2afefd51b342a98
     }
+    getValues(this);
+
 
   };
   //
@@ -90,6 +107,7 @@ myBi.insert(10);
 myBi.insert(25);
 myBi.insert(15);
 myBi.depthFirstLog(func);
+console.log(array);
 
 
 
