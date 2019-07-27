@@ -1,6 +1,6 @@
 const Tree = require("../src/tree");
 
-describe.skip("tree", function() {
+describe("tree", function() {
   let tree;
 
   beforeEach(function() {

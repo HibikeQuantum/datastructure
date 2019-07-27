@@ -1,6 +1,6 @@
 const BinarySearchTree = require("../src/binarySearchTree");
 
-describe.skip("binarySearchTree", function() {
+describe("binarySearchTree", function() {
   var binarySearchTree;
 
   beforeEach(function() {
@@ -8,6 +8,7 @@ describe.skip("binarySearchTree", function() {
   });
 
   it('should have methods named "insert", "contains", and "depthFirstLog', function() {
+    console.error(typeof binarySearchTree,"뭐야 넌")
     expect(binarySearchTree).toHaveProperty("insert");
     expect(binarySearchTree).toHaveProperty("contains");
     expect(binarySearchTree).toHaveProperty("depthFirstLog");

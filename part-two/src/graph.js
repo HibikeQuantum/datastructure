@@ -85,7 +85,7 @@ Graph.prototype.removeEdge = function (fromNode, toNode) {
 
     return this;
   }
-  ;
+};
 
 // Pass in a callback which will be executed on each node of the graph.
   Graph.prototype.forEachNode = function (cb) {
@@ -94,11 +94,10 @@ Graph.prototype.removeEdge = function (fromNode, toNode) {
         cb(parseInt(key), this.adjList[key]);
       }
     }
-    console.log(this.adjList);
   };
 
   /*
    * Complexity: What is the time complexity of the above functions?
    */
-  
+
   module.exports = Graph;
